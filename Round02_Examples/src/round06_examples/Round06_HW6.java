@@ -43,7 +43,7 @@ public class Round06_HW6 {
                 day = 28;
         }
         
-        int days = 0;
+        int days = 1;
         
         for(int i=1;i<year;i++){
             if(i%4 != 0 )
@@ -78,23 +78,23 @@ public class Round06_HW6 {
             case 2 : days += 31%7;
         }
         days %= 7;
-        System.out.printf("================ ( %d년 %2d월 ) ================\n",year,mon);
-        System.out.printf("%s%6s%6s%6s%6s%6s%6s\n","일","월","화","수","목","금","토");
+        System.out.printf("============== ( %d년 %2d월 ) ==============\n",year,mon);
+        System.out.printf("%s%7s%7s%7s%7s%7s%7s\n","SUN","MON","TUE","WED","THU","FRI","SAT");
         for(int i=0;i<days;i++){
             if(i==0)
-                System.out.printf("%2s"," ");
+                System.out.printf("%3s"," ");
             else
                 System.out.printf("%7s"," ");
         }
         for(int i=1;i<=day;i++){
             if((days+i)%7 == 1)
-                System.out.printf("%2d",i);
+                System.out.printf("%3d",i);
             else
                 System.out.printf("%7d",i);
             if((days+i)%7 == 0)
                 System.out.println();
         }
         System.out.println();
-        System.out.println("=================================================");
+        System.out.println("=============================================");
     }
 }
